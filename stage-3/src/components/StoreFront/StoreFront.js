@@ -12,6 +12,7 @@ class StoreFront extends Component {
     render() {
         console.log(this.props.products);
         let productDisplay = this.props.products.map((element, index) => {
+          console.log(element);
             return (
                 <div className="product-container" key={index}>
                     <h2>{element.title}</h2>
@@ -22,6 +23,7 @@ class StoreFront extends Component {
                 </div>
             )
         })
+        //console.log(productDisplay);
         return (
             <div className="storefront-container">
                 {productDisplay}
